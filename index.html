@@ -1,3 +1,12 @@
+<!--Este proyecto en HTML está completo.-->
+
+<!--Nota:
+    La página web creada aquí SOLAMENTE CONTIENE HTML, NO ESTÁ CON CSS NI JAVASCRIPT. Se tiene
+    espacios en blanco ya que solamente es para tener las notas extra para aquella persona que
+    lea el proyecto y esté iniciando junto a tener la posibilidad de que lo prubes tu mismo
+    insertando las imagenes y videos que tu gustes para personalizarla :D-->
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -43,6 +52,22 @@
             </nav>
         </header>
 
+        <audio
+        autoplay
+        loop
+        muted
+        controls
+        src="">
+        </audio>
+
+        <video
+        autoplay
+        loop
+        muted
+        controls
+        src="https://www.youtube.com/watch?v=6WfakAlTTpg">
+        </video>
+
         <main>
         <p><strong>Developer y fotografo</strong> amateur sin experiencia profesional.</p>
 
@@ -80,6 +105,68 @@
         <section>
             <article>
                 <header>
+                    <h4>La página web de Tesla</h4>
+                    <img
+                        style="width: 100%; aspect-ratio: 16/9;"
+                        loading="lazy"
+                        src=""
+                        alt="">
+                        <!--Loading lazy hace la carga de imagen de manera más lenta,
+                            depende de la conexión y recursos.
+                            Advertencia:
+                            No lo uses en imagenes que se ven a primera vista en
+                            cuanto se abre la página-->
+                        <!--Para los tamaños de imagen lo mejor es saber la relación
+                            de tamaño para poder modificarla bien.-->
+                        <!--El 'canvas' es otro elementos HTML que te permite dibujar
+                            en el, en planos 2D y 3D.-->
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <iframe
+                        style="width: 100%; aspect-ratio: 16/9;""
+                        height=""
+                        src=""
+                        title=""
+                        frameborder=""
+                        allow=""
+                        allowfullscreen=""
+                        ></iframe>
+                        <!--El 'iframe' permite el poder anexar otra pagina web en tu propia para
+                            evitar que puedan usar tu pagina web en otras paginas web.
+                            
+                            El 'allow' son los permisos que permites a la URL tener acceso.-->
+                    <br>
+                    <br>
+                    <dialog id="modal">
+                        <h1>¿Sabías que puedes abrir una modal así?</h1>
+                        <p>¡Y es totalmente nativo!</p>
+                        <button id="hide">Cerrar modal</button>
+                    </dialog>
+                    <!---->
+
+                    <button id="show">Mostrar más información</button>
+
+                    <script>
+                        window.show.addEventListener('click', () => {
+                            window.dialog.showModal()
+                        })
+
+                        window.hide.addEventListener('click', () => {
+                            window.dialog.close()
+                        })
+                    </script>
+                    <!--El 'script' es para ingresar código extra ajeno a HTML, generalmente es
+                        JavaScript-->
+                    <!--Cada que se usa el 'id' se crea una propiedad en el window con el nombre
+                        de esa 'id'.-->
+                    <!--La gente luego abusa de los id, en JavScript cobra factura ya que se
+                        genera una propieda en el window para tener acceso a ese 'id'.-->
+                    <!--'window.open' entra en colisión, trata de no usarlo.-->
+
+                    <!--La configuración completa de este modulo es una aplicación para poder 
+                    mostras un modal en la página web según hagas 'click'.-->
                     <h4>Sitio Web Corportativo</h4>
                 </header>
                 <p>
@@ -92,17 +179,102 @@
         </section>
 
         <section>
+            <h2>Preguntas frecuentes</h2>
+
+            <details open>  <!--El estado 'open' se puede poner para que esté abierto todo el momento.-->
+                <sumary>¿Qué estudios tienes?</sumary>
+                <p>Estudio en la universidad de IPN en la Unidad de UPIICSA
+                    una Licenciatura en Ciencias de la Informatica. Actualmente
+                    estoy en mi tercer semestre de los ocho que debo cursar.</p>
+            </details>
+
+            <details>
+                <sumary>¿Cuales son tus hobbies?</sumary>
+                <p>Me gusta mucho leer libros de fantasía, los videojuegos, 
+                    las películas de fantasía, acción, ciencia ficción y romance,
+                     jugar videojuegos, el deporte -sobre todo patinar y la bicileta- 
+                     junto a la fotografía.
+                </p>
+            </details>
+
+            <details>
+                <sumary>¿Cuál es tu lenguaje favorito?</sumary>
+                <p>Actualmente sigo experimentando más lenguajes pero el que más me ha 
+                    gustado es Python ya que es muy versatil y fácil de comprender. 
+                    Igualmente me gusta mucho Swift ya que es un lenguaje moderno y 
+                    fácil de aprender.</p>
+            </details>
+        </section>
+
+        <section>
             <h2>Formulario de contacto</h2>
 
             <form method="post" action="/">
                 <fieldset>
                     <legend>Información personal</legend>
 
-                    <label for="name">Nombre:</label>
-                    <input type="text" id="name" name="name"
-                    placeholder="Kai Yazumorito">
+                        <div>
+                            <label for="name">Nombre:</label>
+                            <input type="text" id="name"  name="name"
+                            placeholder="Kai Yazumorito" required>
+                            <!--Se puede usar el id o no, depende de la legania del input y donde se conecta.-->
+                            <label>Correo:
+                                <input
+                                type="email"
+                                name="email"
+                                placeholder="fulaintodetal@mail.com"
+                                requiered
+                                >
+                                <!--Usar el type de email le puede ayudar al usario a poner el correo.
+                                    En el navegador se verá diferente.-->
+                            </label>
+                        </div>
                 </fieldset>
 
+                <fieldset>
+                    <legend>Información adicional</legend>
+                    <div>
+                        <label>Teléfono:
+                            <input type="tel" name="phone" placehoder="55-5555-5555" requiered patter="^\d{2}-\d{4}-\d{4}$">
+                            <!--Con el type tel pasa lo mismo que con el type email.-->
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Otros</legend>
+
+                    <div>
+                        <label for="why">¿Por qué quieres contactar?
+                            <select name="why" id="why">
+                                <option name="1">Trabajo</option>
+                                <option name="2">Duda</option>
+                                <option name="3">Más información</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div>
+                        <label for="terms">¿Aceptas los términos?</label>
+                        <input type="checkbox" id="terms" name="terms" requiered>
+                    </div>
+
+                    <div>
+                        <datalist id="languages">   <!--No se puede estilar-->
+                            <option value="JavaScript"></option>
+                            <option value="Python"></option>
+                            <option value="Java"></option>
+                            <option value="C#"></option>
+                        </datalist>
+                        <label>
+                            ¿Con qué lenguaje quieres que te ayude?
+                            <input list="languages" name="languages">
+                        </label>
+                    </div>
+                </fieldset>
+                
+                <input type="submit" value="Enivar contacto">
+                <button type="submit">Enviar contacto</button>  <!--Dentro de un formulario, el 'button' será del tipo submit-->
             </form>
         </section>
 
