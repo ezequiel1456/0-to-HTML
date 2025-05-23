@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="css.css">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Portfolio KaiDev - Student Developer</title>
+
+    <meta name="description" content="Portfolio of KaiDev, a computer systems engineering student seeking web development experience.">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Portfolio of a Computer Systems Engineering Student">
+    <meta property="og:description" content="Portfolio of KaiDev, a computer systems engineering student seeking web development experience.">
+    <meta property="og:image:" content="/images/Foto favorita.jpg">
+    <meta property="og:image:alt" content="A photograph of KaiDev from years ago">
+
+    <link rel="alternative" href="https://kaidev.com" hreflang="es-mx">
+    <link rel="canonical" href="https://kaidev.com">
+
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#09f">
+
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+</head>
+
+<body class="body">
+    <header class="head">
+        <h1>Portfolio of @KaiDev</h1>
+        <nav>
+            <a href="#experience">Experience</a>
+            <a href="#projects" target="_blank" rel="noreferrer">Projects</a>
+            <a href="https://github.com/Kai-Yazumorito">GitHub</a>
+        </nav>
+    </header>
+
+    <audio autoplay loop muted controls src=""></audio>
+    <br><br><br>
+
+    <video autoplay loop muted controls src="https://www.youtube.com/watch?v=6WfakAlTTpg"></video>
+
+    <main>
+        <p><strong>Amateur developer and photographer</strong> with no professional experience.</p>
+
+        <h2 id="experience">Experience</h2>
+        <ul>
+            <li class="list-item">Classroom Project (2021-1) - 2020</li>
+            <li class="list-item">Classroom Project (2020-2) - 2020</li>
+            <li class="list-item">UPIICSA - in process</li>
+        </ul>
+
+        <a download href="">
+            <img id="photo-profile" width=250 height=250 title="Photo of KaiDev" alt="A photo of KaiDev wearing a face mask" src="/images/Foto favorita.jpg">
+        </a>
+
+        <h2 id="projects">Completed Projects</h2>
+
+        <aside>
+            <header>
+                <h3>My Favorite Technologies</h3>
+            </header>
+            <ol>
+                <li>HTML</li>
+                <li>C/C++</li>
+                <li>Python</li>
+            </ol>
+        </aside>
+
+        <section>
+            <article>
+                <header>
+                    <h4>Tesla Website</h4>
+                    <img style="width: 100%; aspect-ratio: 16/9;" loading="lazy" src="" alt="">
+                    <br><br><br><br>
+                    <iframe style="width: 100%; aspect-ratio: 16/9;" src="" title="" frameborder="" allow="" allowfullscreen></iframe>
+                    <br><br>
+
+                    <dialog id="modal">
+                        <h1>Did you know you can open a modal like this?</h1>
+                        <p>And it’s completely native!</p>
+                        <button id="hide">Close modal</button>
+                    </dialog>
+
+                    <button id="show">Show more info</button>
+
+                    <script>
+                        window.show.addEventListener('click', () => {
+                            window.modal.showModal()
+                        })
+                        window.hide.addEventListener('click', () => {
+                            window.modal.close()
+                        })
+                    </script>
+
+                    <h4>Corporate Website</h4>
+                </header>
+                <p>
+                    Development of a corporate website with a friendly and modern interface.
+                </p>
+                <footer>
+                    <small>Technologies used: HTML, CSS, JavaScript</small>
+                </footer>
+            </article>
+        </section>
+
+        <section>
+            <h2>Frequently Asked Questions</h2>
+
+            <details open>
+                <summary>What are your studies?</summary>
+                <p>I study Computer Science at IPN university, UPIICSA unit. I am currently in my third semester out of eight.</p>
+            </details>
+
+            <details>
+                <summary>What are your hobbies?</summary>
+                <p>I really enjoy reading fantasy books, playing video games, watching fantasy, action, sci-fi, and romance movies, as well as skating, cycling, and photography.</p>
+            </details>
+
+            <details>
+                <summary>What is your favorite programming language?</summary>
+                <p>I’m still exploring new languages, but I like Python the most because it’s very versatile and easy to understand. I also really like Swift for being modern and beginner-friendly.</p>
+            </details>
+        </section>
+
+        <section>
+            <h2>Contact Form</h2>
+
+            <form method="post" action="/">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Kai Yazumorito" required>
+                        <label>Email:
+                            <input type="email" name="email" placeholder="someone@mail.com" required>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Additional Information</legend>
+                    <div>
+                        <label>Phone:
+                            <input type="tel" name="phone" placeholder="55-5555-5555" required pattern="^\d{2}-\d{4}-\d{4}$">
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Other</legend>
+
+                    <div>
+                        <label for="why">Why are you contacting?
+                            <select name="why" id="why">
+                                <option name="1">Work</option>
+                                <option name="2">Question</option>
+                                <option name="3">More info</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div>
+                        <label for="terms">Do you accept the terms?</label>
+                        <input type="checkbox" id="terms" name="terms" required>
+                    </div>
+
+                    <div>
+                        <datalist id="languages">
+                            <option value="JavaScript"></option>
+                            <option value="Python"></option>
+                            <option value="Java"></option>
+                            <option value="C#"></option>
+                        </datalist>
+                        <label>
+                            What language would you like help with?
+                            <input list="languages" name="languages">
+                        </label>
+                    </div>
+                </fieldset>
+
+                <input type="submit" value="Submit Contact">
+                <button type="submit">Send Contact</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        Copyright © 2025 KaiDev
+        <a href="mailto:wishiwishi@gmail.com">Send me an email.</a>
+        <a href="tel:+0101010101">Call me</a>
+    </footer>
+</body>
+</html>
